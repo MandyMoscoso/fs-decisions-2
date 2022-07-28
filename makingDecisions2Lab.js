@@ -95,7 +95,7 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 let someNum = myFavoriteNumbers[4];
-
+// console.log(someNum)
 ////////// PROBLEM 7 //////////
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
@@ -106,7 +106,7 @@ if (myFavoriteNumbers.length < 7){
   console.log("There are not enough elements in this array")
 } else{
   someNum = myFavoriteNumbers[6]
-  // console.log(someNum)
+  console.log(someNum)
 }
 
 ////////// PROBLEM 8 //////////
@@ -204,12 +204,28 @@ switch(letterGrade){
 */
 
 //Code Here
-for ( i=1; i <100; i++){
-  if (i%15 ===0){
-    console.log("Devmountain")
-  } else if (i%3 === 0){
-    console.log("Dev")
-  } else if( i%5 ===0){
-    console.log("mountain")
-  } else (console.log(i))
+// for ( i=1; i <100; i++){
+//   if (i%15 ===0){
+//     console.log("Devmountain")
+//   } else if (i%3 === 0){
+//     console.log("Dev")
+//   } else if( i%5 ===0){
+//     console.log("mountain")
+//   } else (console.log(i))
+// }
+
+for (i=1; i<100; i++){
+  switch (true){
+      case i%15===0:
+          console.log("Devmountain");
+          break;
+      case i%3 === 0:
+          console.log("Dev");
+          break;
+      case i%5 === 0:
+          console.log("mountain");
+          break;
+      default:
+          console.log(i)    
+  }
 }
